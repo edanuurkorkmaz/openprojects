@@ -6,19 +6,29 @@ export type Project = {
   website?: string;
   country?: string;
   author: string;
-  sponsor?: string;
+  sponsor?: ProjectSponsor;
   featured?: boolean;
   tags: string[];
-  category:
-    | "Library"
-    | "Framework"
-    | "Tool"
-    | "Frontend"
-    | "Backend"
-    | "Mobile"
-    | "DevOps"
-    | "Database"
-    | "Application"
-    | "Other";
+  category: ProjectCategory;
   language: string;
 };
+
+export enum ProjectCategory {
+  Library = "Library",
+  Framework = "Framework",
+  Tool = "Tool",
+  Frontend = "Frontend",
+  Backend = "Backend",
+  Mobile = "Mobile",
+  DevOps = "DevOps",
+  Database = "Database",
+  Application = "Application",
+  Authentication = "Authentication",
+  Other = "Other",
+}
+
+export enum ProjectSponsor {
+  Platinum = "Platinum",
+  Gold = "Gold",
+  Silver = "Silver",
+}

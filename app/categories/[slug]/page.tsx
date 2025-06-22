@@ -1,4 +1,4 @@
-import projectsData from "@/data/projects.json";
+import projectsData from "@/data/projects";
 
 export default async function CategoryPage({
   params,

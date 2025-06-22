@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Award, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import projects from "@/data/projects.json";
+import projects from "@/data/projects";
 import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -207,41 +207,6 @@ export default function FeaturedPage() {
             </div>
           </div>
         )}
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <Card className="max-w-4xl mx-auto border-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-            <CardHeader className="pb-4">
-              <div className="flex items-center justify-center mb-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-              </div>
-              <CardTitle className="text-2xl md:text-3xl font-bold">
-                Projeniz de seçilsin mi?
-              </CardTitle>
-              <CardDescription className="text-lg max-w-2xl mx-auto">
-                Kaliteli, yenilikçi ve topluluk için faydalı projeler editörün
-                seçimi bölümünde yer alabilir.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="gap-2">
-                  <Link href="/submit">
-                    <Award className="w-5 h-5" />
-                    Proje Gönder
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="gap-2">
-                  <Link href="/guidelines">
-                    <ExternalLink className="w-5 h-5" />
-                    Seçim Kriterleri
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </div>
   );

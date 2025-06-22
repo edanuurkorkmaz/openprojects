@@ -24,7 +24,7 @@ export default async function SubmitPage() {
 
   return (
     <div className="min-h-screen bg-background py-12 px-4">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <Badge variant="outline" className="px-4 py-2">

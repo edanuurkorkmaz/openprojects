@@ -33,15 +33,13 @@ import {
   Github,
   ExternalLink,
 } from "lucide-react";
-import projectsData from "@/data/projects.json";
+import projects from "@/data/projects";
 import { ProjectCard, ProjectCardSkeleton } from "@/components/project-card";
 import { ProjectFilters } from "@/components/project-filters";
 import { useDebounce } from "@/hooks/use-debounce";
 import { CircleFlag } from "react-circle-flags";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-const { projects } = projectsData;
 
 // Get unique values for filters
 const addProjectId = (project: any, idx: number) => ({

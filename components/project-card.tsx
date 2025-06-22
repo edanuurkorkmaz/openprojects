@@ -33,7 +33,7 @@ import {
 } from "./ui/tooltip";
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Project } from "@/types/project";
+import { Project, ProjectSponsor } from "@/types/project";
 
 interface ProjectCardProps {
   project: Project;
@@ -137,13 +137,13 @@ export function ProjectCard({
                     <Tooltip>
                       <TooltipTrigger>
                         <Badge variant={"secondary"}>
-                          {project.sponsor === "platinum" && (
+                          {project.sponsor === ProjectSponsor.Platinum && (
                             <Diamond className="w-4 h-4 text-blue-500" />
                           )}
-                          {project.sponsor === "gold" && (
+                          {project.sponsor === ProjectSponsor.Gold && (
                             <Medal className="w-4 h-4 text-yellow-500" />
                           )}
-                          {project.sponsor === "silver" && (
+                          {project.sponsor === ProjectSponsor.Silver && (
                             <Award className="w-4 h-4 text-gray-400" />
                           )}
                         </Badge>

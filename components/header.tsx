@@ -26,22 +26,13 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import { CircleFlag } from "react-circle-flags";
-import projectsData from "@/data/projects.json";
+import projects from "@/data/projects";
 import { useDebounce } from "@/hooks/use-debounce";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-
-const { projects } = projectsData;
-
-// Filter projects based on flags
-const addProjectId = (project: any, idx: number) => ({
-  id: idx + 1,
-  ...project,
-});
-const projectsWithIds = projects.map(addProjectId);
 
 export function Header() {
   const { theme, setTheme } = useTheme();
@@ -59,7 +50,7 @@ export function Header() {
   const commandFilteredProjects = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase();
-    return projectsWithIds
+    return projects
       .filter((project) => {
         return (
           project.name.toLowerCase().includes(query) ||
@@ -109,7 +100,7 @@ export function Header() {
             <CommandGroup heading={t("commands.projects")}>
               {commandFilteredProjects.map((project) => (
                 <CommandItem
-                  key={project.id}
+                  key={project.name}
                   className="flex items-center justify-between p-4 cursor-pointer hover:bg-muted"
                   onSelect={() => {
                     setCommandOpen(false);

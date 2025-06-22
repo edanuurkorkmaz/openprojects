@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Folder, ArrowRight, TrendingUp } from "lucide-react";
 import Link from "next/link";
-import projectsData from "@/data/projects.json";
+import projectsData from "@/data/projects";
 
 const categoryInfo = {
   Framework: {

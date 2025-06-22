@@ -11,7 +11,7 @@ import {
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
-import projectsData from "@/data/projects.json";
+import projects from "@/data/projects";
 import { ProjectCard } from "@/components/project-card";
 import {
   Carousel,
@@ -20,13 +20,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { twMerge } from "tailwind-merge";
-import { CircleFlag } from "react-circle-flags";
 import { getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
 import { Project } from "@/types/project";
-
-const { projects } = projectsData;
 
 const featuredProjects = projects.filter((project) => project.featured);
 const sponsorProjects = projects.filter((project) => project.sponsor);
@@ -85,49 +80,51 @@ export default async function HomePage() {
         </div>
       </section>
       {/* Sponsor Projects */}
-      {sponsorProjects.length > 0 && (
-        <section className="relative">
-          <div className="absolute inset-0 bg-linear-to-tr from-primary/5 via-background to-secondary/5" />
-          <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
-            <div className="text-center mb-16 space-y-4">
-              <Badge
-                variant="outline"
-                className="px-4 py-2 border-blue-200 text-blue-700 dark:border-blue-800 dark:text-blue-300"
-              >
-                <Crown className="w-4 h-4 mr-2" />
-                {t("sponsorProjects")}
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold">
-                {t("supportedProjects")}
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                {t("sponsoredDesc")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sponsorProjects
-                .sort((a, b) => {
-                  const order: Record<string, number> = {
-                    platinum: 0,
-                    gold: 1,
-                    silver: 2,
-                  };
-                  return (
-                    order[a.sponsor!] - order[b.sponsor!] ||
-                    a.name.localeCompare(b.name)
-                  );
-                })
-                .map((project) => (
-                  <ProjectCard
-                    key={project.name}
-                    project={project as Project}
-                  />
-                ))}
-            </div>
+      <section className="relative">
+        <div className="absolute inset-0 bg-linear-to-tr from-primary/5 via-background to-secondary/5" />
+        <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+          <div className="text-center mb-16 space-y-4">
+            <Badge
+              variant="outline"
+              className="px-4 py-2 border-blue-200 text-blue-700 dark:border-blue-800 dark:text-blue-300"
+            >
+              <Crown className="w-4 h-4 mr-2" />
+              {t("sponsorProjects")}
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              {t("supportedProjects")}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {t("sponsoredDesc")}
+            </p>
           </div>
-        </section>
-      )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sponsorProjects.length === 0 && (
+              <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center">
+                <p className="text-lg text-muted-foreground">
+                  {t("noSponsorProjects")}
+                </p>
+              </div>
+            )}
+            {sponsorProjects
+              .sort((a, b) => {
+                const order: Record<string, number> = {
+                  platinum: 0,
+                  gold: 1,
+                  silver: 2,
+                };
+                return (
+                  order[a.sponsor!] - order[b.sponsor!] ||
+                  a.name.localeCompare(b.name)
+                );
+              })
+              .map((project) => (
+                <ProjectCard key={project.name} project={project as Project} />
+              ))}
+          </div>
+        </div>
+      </section>
 
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
@@ -146,16 +143,6 @@ export default async function HomePage() {
                 <p className="text-xl text-muted-foreground">
                   {t("featuredDesc")}
                 </p>
-              </div>
-              <div className="absolute right-0 top-0">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="px-4 py-2 text-sm"
-                >
-                  <Link href="/featured">{t("allFeatured")}</Link>
-                </Button>
               </div>
             </div>
             <div className="relative">
@@ -177,6 +164,16 @@ export default async function HomePage() {
                 </CarouselContent>
                 <CarouselNext className="absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-background/80 backdrop-blur border border-border shadow-lg hover:bg-primary hover:text-white transition-colors w-12 h-12 text-2xl rounded-full flex items-center justify-center" />
               </Carousel>
+            </div>
+            <div>
+              <Button
+                variant="outline"
+                size="sm"
+                asChild
+                className="px-4 py-2 text-sm w-full mt-6 md:mt-8"
+              >
+                <Link href="/featured">{t("allFeatured")}</Link>
+              </Button>
             </div>
           </div>
         </section>

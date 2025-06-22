@@ -1,51 +1,48 @@
-"use client";
-import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  ExternalLink,
-  Github,
-  Star,
-  GitFork,
-  Users,
-  Calendar,
-} from "lucide-react";
+import { ExternalLink, Github, Star, GitFork, Users } from "lucide-react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
-import projectsData from "@/data/projects.json";
+import projects from "@/data/projects";
+import { Project } from "@/types/project";
 
-export default function ProjectPage() {
-  const params = useParams();
-  const project = projectsData.projects.find(
-    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === params.slug
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.name.toLowerCase().replace(/\s+/g, "-"),
+  }));
+}
+
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project: Project | undefined = projects.find(
+    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === slug
   );
-
-  const [repoData, setRepoData] = useState<any>(null);
-  const [contributors, setContributors] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!project?.githubUrl) return;
-    setLoading(true);
-    fetch(`/api/github-data?githubUrl=${encodeURIComponent(project.githubUrl)}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setRepoData(data.repoData);
-        setContributors(
-          Array.isArray(data.contributors) ? data.contributors : []
-        );
-      })
-      .finally(() => setLoading(false));
-  }, [project?.githubUrl]);
 
   if (!project) {
     notFound();
   }
 
+  const response = await fetch(
+    `${
+      process.env.NEXT_PUBLIC_BASE_URL
+    }/api/github-data?githubUrl=${encodeURIComponent(project.githubUrl)}`
+  )
+    .then((res) => res.json())
+    .catch((error) => {
+      console.error("Error fetching GitHub data:", error);
+      return { repoData: null, contributors: [] };
+    });
+
+  const { repoData, contributors } = response;
+
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto max-w-4xl px-4 py-8">
+      <div className="container mx-auto max-w-7xl px-4 py-8">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-start justify-between mb-4">
@@ -73,26 +70,20 @@ export default function ProjectPage() {
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 text-yellow-500" />
               <span className="font-semibold">
-                {loading
-                  ? "..."
-                  : repoData?.stargazers_count?.toLocaleString() ?? "0"}
+                {repoData?.stargazers_count?.toLocaleString() ?? "0"}
               </span>
               <span className="text-muted-foreground">stars</span>
             </div>
             <div className="flex items-center gap-2">
               <GitFork className="w-5 h-5 text-blue-500" />
               <span className="font-semibold">
-                {loading
-                  ? "..."
-                  : repoData?.forks_count?.toLocaleString() ?? "0"}
+                {repoData?.forks_count?.toLocaleString() ?? "0"}
               </span>
               <span className="text-muted-foreground">forks</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-5 h-5 text-green-500" />
-              <span className="font-semibold">
-                {loading ? "..." : contributors.length}
-              </span>
+              <span className="font-semibold">{contributors.length}</span>
               <span className="text-muted-foreground">contributors</span>
             </div>
           </div>
