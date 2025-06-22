@@ -20,17 +20,7 @@ import {
   Eye,
 } from "lucide-react";
 import Link from "next/link";
-import projectsData from "@/data/projects.json";
 import { useTranslations } from "next-intl";
-
-const { projects } = projectsData;
-
-const stats = {
-  totalProjects: projects.length,
-  turkishProjects: projects.filter((p) => p.country === "TR").length,
-  languages: [...new Set(projects.map((p) => p.language))].length,
-  contributors: projects.length * 2, // Approximate
-};
 
 export default function AboutPage() {
   const t = useTranslations("about");
@@ -137,7 +127,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild>
                 <Link
-                  href="https://github.com/furkanczay/open-projects"
+                  href="https://github.com/furkanczay/openprojects"
                   target="_blank"
                 >
                   <Github className="w-4 h-4 mr-2" />
@@ -161,7 +151,7 @@ export default function AboutPage() {
           </p>
           <Button asChild variant="outline">
             <Link
-              href="https://github.com/furkanczay/open-projects/issues"
+              href="https://github.com/furkanczay/openprojects/issues"
               target="_blank"
             >
               <Github className="w-4 h-4 mr-2" />

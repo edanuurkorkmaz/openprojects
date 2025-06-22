@@ -54,7 +54,7 @@ export default async function SubmitPage() {
             <CardContent>
               <Button asChild className="w-full">
                 <Link
-                  href="https://github.com/furkanczay/open-projects/fork"
+                  href="https://github.com/furkanczay/openprojects/fork"
                   target="_blank"
                 >
                   <Github className="w-4 h-4 mr-2" />
@@ -80,7 +80,7 @@ export default async function SubmitPage() {
             <CardContent>
               <Button variant="outline" asChild className="w-full">
                 <Link
-                  href="https://github.com/furkanczay/open-projects/edit/main/data/projects.json"
+                  href="https://github.com/furkanczay/openprojects/edit/master/data/projects.json"
                   target="_blank"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
@@ -106,7 +106,7 @@ export default async function SubmitPage() {
             <CardContent>
               <Button variant="outline" asChild className="w-full">
                 <Link
-                  href="https://github.com/furkanczay/open-projects/compare"
+                  href="https://github.com/furkanczay/openprojects/compare"
                   target="_blank"
                 >
                   <GitPullRequest className="w-4 h-4 mr-2" />
@@ -216,7 +216,7 @@ export default async function SubmitPage() {
         <div className="text-center">
           <Button asChild size="lg" className="text-lg px-8 py-6">
             <Link
-              href="https://github.com/furkanczay/open-projects/edit/main/data/projects.json"
+              href="https://github.com/furkanczay/openprojects/edit/master/data/projects.json"
               target="_blank"
             >
               <Github className="w-5 h-5 mr-2" />

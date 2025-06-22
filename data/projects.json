@@ -11,10 +11,7 @@
       "tags": ["frontend", "framework", "react", "ssr"],
       "category": "Framework",
       "featured": true,
-      "sponsor": {
-        "enabled": true,
-        "type": "platinum"
-      }
+      "sponsor": "platinum"
     },
     {
       "name": "React",
@@ -25,8 +22,7 @@
       "language": "JavaScript",
       "author": "facebook",
       "tags": ["frontend", "framework", "javascript", "ui"],
-      "category": "Framework",
-      "featured": false
+      "category": "Framework"
     },
     {
       "name": "Better Auth",
@@ -38,6 +34,17 @@
       "author": "bekacru",
       "tags": ["authentication", "security", "backend"],
       "category": "Library",
+      "featured": true
+    },
+    {
+      "name": "NoobGG",
+      "description": "A platform for gamers to connect and play together",
+      "longDescription": "NoobGG is a community-driven platform that connects gamers, allowing them to find teammates, join games, and share experiences.",
+      "githubUrl": "https://github.com/noobgg-team/noobgg",
+      "language": "Typescript",
+      "author": "noobgg-team",
+      "tags": ["gaming", "community", "platform"],
+      "category": "Application",
       "featured": true
     }
   ]

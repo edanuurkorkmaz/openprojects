@@ -201,7 +201,7 @@ export function Header() {
             "container mx-auto flex items-center justify-between px-4 transition-all duration-300",
             isScrolled
               ? "h-16 max-w-screen-xl rounded-2xl border bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60"
-              : "h-20 max-w-full"
+              : "h-20 max-w-7xl"
           )}
         >
           <Link href="/" className="flex items-center space-x-3 group">
@@ -305,7 +305,7 @@ export function Header() {
               className="hidden md:flex hover:bg-muted/80"
             >
               <Link
-                href="https://github.com/furkanczay/open-projects"
+                href="https://github.com/furkanczay/openprojects"
                 target="_blank"
               >
                 <Github className="w-4 h-4 mr-2" />

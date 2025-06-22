@@ -22,7 +22,7 @@ export function Footer() {
   const tNav = useTranslations("navigation");
   return (
     <footer className="border-t bg-linear-to-br from-muted/30 to-muted/10">
-      <div className="container mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">

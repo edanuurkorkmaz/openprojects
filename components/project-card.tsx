@@ -33,25 +33,7 @@ import {
 } from "./ui/tooltip";
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
-
-interface Project {
-  id: number;
-  name: string;
-  description: string;
-  githubUrl: string;
-  website?: string;
-  language: string;
-  author: string;
-  tags: string[];
-  category: string;
-  country?: string;
-  featured: boolean;
-  sponsor?: {
-    enabled: boolean;
-    type?: "platinum" | "gold" | "silver";
-  };
-  createdAt: string;
-}
+import { Project } from "@/types/project";
 
 interface ProjectCardProps {
   project: Project;
@@ -151,24 +133,23 @@ export function ProjectCard({
                       <TooltipContent>{t("featuredProject")}</TooltipContent>
                     </Tooltip>
                   )}
-                  {project.sponsor?.enabled && (
+                  {project.sponsor && (
                     <Tooltip>
                       <TooltipTrigger>
                         <Badge variant={"secondary"}>
-                          {project.sponsor.type === "platinum" && (
+                          {project.sponsor === "platinum" && (
                             <Diamond className="w-4 h-4 text-blue-500" />
                           )}
-                          {project.sponsor.type === "gold" && (
+                          {project.sponsor === "gold" && (
                             <Medal className="w-4 h-4 text-yellow-500" />
                           )}
-                          {project.sponsor.type === "silver" && (
+                          {project.sponsor === "silver" && (
                             <Award className="w-4 h-4 text-gray-400" />
                           )}
                         </Badge>
                       </TooltipTrigger>
                       <TooltipContent>
-                        {t("sponsorProject")} -{" "}
-                        {project.sponsor.type?.toUpperCase()}
+                        {t("sponsorProject")} - {project.sponsor?.toUpperCase()}
                       </TooltipContent>
                     </Tooltip>
                   )}
