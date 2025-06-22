@@ -9,6 +9,16 @@ export type Project = {
   sponsor?: string;
   featured?: boolean;
   tags: string[];
-  category: string;
+  category:
+    | "Library"
+    | "Framework"
+    | "Tool"
+    | "Frontend"
+    | "Backend"
+    | "Mobile"
+    | "DevOps"
+    | "Database"
+    | "Application"
+    | "Other";
   language: string;
 };

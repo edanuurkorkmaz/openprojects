@@ -119,7 +119,10 @@ export default async function HomePage() {
                   );
                 })
                 .map((project) => (
-                  <ProjectCard key={project.name} project={project} />
+                  <ProjectCard
+                    key={project.name}
+                    project={project as Project}
+                  />
                 ))}
             </div>
           </div>
@@ -166,7 +169,7 @@ export default async function HomePage() {
                     >
                       <ProjectCard
                         hideContributors
-                        project={project}
+                        project={project as Project}
                         className="h-full"
                       />
                     </CarouselItem>
