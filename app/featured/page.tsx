@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { CircleFlag } from "react-circle-flags";
 import { useTranslations } from "next-intl";
 
-// `projects.json` can either export the array directly **or**
+// `projects.ts` can either export the array directly **or**
 // an object `{ projects: [...] }`.  Normalise so we always get an array.
 const allProjects = Array.isArray(projects)
   ? projects

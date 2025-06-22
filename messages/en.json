@@ -59,7 +59,7 @@
     "step1": "1. Fork & Clone",
     "step1Desc": "Fork the repository and clone it to your local machine",
     "step2": "2. Add Project",
-    "step2Desc": "Add your project information to the projects.json file",
+    "step2Desc": "Add your project information to the projects.ts file",
     "step3": "3. Create PR",
     "step3Desc": "Open a Pull Request and wait for your project to be published",
     "addNow": "Add Now",
@@ -182,7 +182,7 @@
       },
       "step2": {
         "title": "Add Project Information",
-        "description": "Edit the data/projects.json file to add your project information",
+        "description": "Edit the data/projects.ts file to add your project information",
         "button": "Edit File"
       },
       "step3": {
@@ -192,8 +192,8 @@
       }
     },
     "jsonFormat": {
-      "title": "Project JSON Format",
-      "description": "Use the following JSON format when adding your project:"
+      "title": "Project Format",
+      "description": "Use the following format when adding your project:"
     },
     "guidelines": {
       "accepted": {

@@ -65,7 +65,7 @@
     "step1": "1. Fork & Clone",
     "step1Desc": "Repository'yi fork edin ve yerel makinenize clone edin",
     "step2": "2. Proje Ekle",
-    "step2Desc": "projects.json dosyasına projenizin bilgilerini ekleyin",
+    "step2Desc": "projects.ts dosyasına projenizin bilgilerini ekleyin",
     "step3": "3. PR Oluştur",
     "step3Desc": "Pull Request açın ve projenizin yayınlanmasını bekleyin",
     "addNow": "Hemen Ekle",
@@ -182,7 +182,7 @@
       },
       "step2": {
         "title": "Proje Bilgilerini Ekleyin",
-        "description": "data/projects.json dosyasını düzenleyerek projenizin bilgilerini ekleyin",
+        "description": "data/projects.ts dosyasını düzenleyerek projenizin bilgilerini ekleyin",
         "button": "Dosyayı Düzenle"
       },
       "step3": {
@@ -192,8 +192,8 @@
       }
     },
     "jsonFormat": {
-      "title": "Proje JSON Formatı",
-      "description": "Projenizi eklerken aşağıdaki JSON formatını kullanın:"
+      "title": "Proje Formatı",
+      "description": "Projenizi eklerken aşağıdaki formatını kullanın:"
     },
     "guidelines": {
       "accepted": {

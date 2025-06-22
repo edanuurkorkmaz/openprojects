@@ -29,7 +29,7 @@ Help grow our collection by adding your open source project to the platform.
    ```
 
 2. **Add Your Project**
-   Edit `data/projects.json` and add your project information:
+   Edit `data/projects.ts` and add your project information:
 
    ```json
    {
@@ -205,7 +205,7 @@ Açık kaynak projenizi platforma ekleyerek koleksiyonumuzun büyümesine yardı
    ```
 
 2. **Projenizi Ekleyin**
-   `data/projects.json` dosyasını düzenleyin ve proje bilgilerinizi ekleyin:
+   `data/projects.ts` dosyasını düzenleyin ve proje bilgilerinizi ekleyin:
 
    ```json
    {
