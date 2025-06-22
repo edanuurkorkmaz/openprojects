@@ -209,9 +209,7 @@ export function Header() {
               <span className="font-bold text-md bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 OpenProjects
               </span>
-              <span className="text-xs text-muted-foreground">
-                Global Open Source
-              </span>
+              <span className="text-xs text-muted-foreground">/v1.0.0</span>
             </div>
           </Link>
 
