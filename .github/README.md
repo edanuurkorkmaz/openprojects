@@ -69,15 +69,3 @@ This project is licensed under the [MIT License](./LICENSE).
   
   **Built with ❤️ by the open source community**
 </div>
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
-
----
-
-<div align="center">
-  <p>⭐ If you like this project, please give it a star!</p>
-  
-  **[🏠 Home](https://openprojects.dev) • [🇺🇸 English](./.github/README_EN.md) • [🇹🇷 Türkçe](./.github/README_TR.md)**
-</div>
