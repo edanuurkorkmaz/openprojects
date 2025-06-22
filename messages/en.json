@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "featured": "Featured",
+    "categories": "Categories",
+    "about": "About",
+    "submit": "Submit Project",
+    "search": "Search",
+    "guidelines": "Contribution Guidelines",
+    "becomeSponsor": "Become a Sponsor",
+    "community": "Community",
+    "contact": "Contact Us"
+  },
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "showAll": "Show All",
+    "showMore": "Show More",
+    "language": "Language",
+    "country": "Country",
+    "tags": "Tags",
+    "author": "Author",
+    "stars": "Stars",
+    "date": "Date",
+    "name": "Name",
+    "contributors": "Contributors",
+    "details": "Details",
+    "viewAll": "View All",
+    "project": "Project"
+  },
+  "home": {
+    "title": "Open Source Projects",
+    "subtitle": "Discover the best open source projects from around the world",
+    "description": "Discover open source projects created by developers, contribute and grow together with the community.",
+    "featuredProjects": "Featured Projects",
+    "featuredDesc": "The most popular and impactful projects carefully selected by our editors",
+    "allFeatured": "Show All Featured",
+    "sponsoredProjects": "Sponsored Projects",
+    "sponsoredDesc": "Open source projects developed by our sponsors who support us",
+    "sponsorProjects": "Our Sponsors",
+    "supportedProjects": "Sponsors",
+    "worldwideProjects": "Worldwide Projects",
+    "worldwideDesc": "Innovative open source projects from around the world",
+    "viewAllProjects": "View All Projects",
+    "sponsors": "Our Sponsors",
+    "sponsorsDesc": "Companies that support this project and contribute to the open source community",
+    "platinumSponsors": "💎 Platinum Sponsors",
+    "goldSponsors": "🥇 Gold Sponsors",
+    "silverSponsors": "🥈 Silver Sponsors",
+    "contribute": "Contribute",
+    "addProject": "Add Your Project",
+    "addProjectDesc": "Share your open source project with the community! You can add your project to the list by opening a simple PR on GitHub and have it discovered by thousands of developers.",
+    "step1": "1. Fork & Clone",
+    "step1Desc": "Fork the repository and clone it to your local machine",
+    "step2": "2. Add Project",
+    "step2Desc": "Add your project information to the projects.json file",
+    "step3": "3. Create PR",
+    "step3Desc": "Open a Pull Request and wait for your project to be published",
+    "addNow": "Add Now",
+    "contributionGuide": "Contribution Guide",
+    "recentProjects": "Recent Projects",
+    "newProjects": "New Projects",
+    "recentDesc": "Latest open source projects added by the community",
+    "supporters": "Our Supporters",
+    "stats": {
+      "projects": "Total Projects",
+      "languages": "Programming Languages",
+      "contributors": "Contributors",
+      "countries": "Countries"
+    }
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Editor’s Choice",
+    "description": "The most popular and impactful open source projects selected by our editors",
+    "allFeaturedProjects": "All Featured Projects"
+  },
+  "projects": {
+    "title": "Project Collection",
+    "subtitle": "Discover {count} open source projects. Search, filter and find projects that suit you.",
+    "searchPlaceholder": "Search projects...",
+    "filters": {
+      "languages": "Languages",
+      "countries": "Countries",
+      "tags": "Tags",
+      "clearAll": "Clear Filters"
+    },
+    "sort": {
+      "name": "Name",
+      "stars": "Star Count",
+      "date": "Date",
+      "language": "Language",
+      "author": "Author"
+    },
+    "loadingMore": "Loading more projects...",
+    "scrollForMore": "Scroll down for more projects ({remaining} remaining)",
+    "allShown": "🎉 All {count} projects shown",
+    "stats": {
+      "results": "Results",
+      "shown": "Shown",
+      "sortedBy": "sorted by"
+    }
+  },
+  "about": {
+    "title": "OpenProjects",
+    "subtitle": "The world's largest open source project collection. For developers, by developers.",
+    "mission": {
+      "title": "Our Mission",
+      "description1": "OpenProjects aims to bring together open source projects from around the world, enabling developers to discover each other's work and contribute.",
+      "description2": "Our main goals are to spread the open source software development culture, promote developers' projects worldwide and support community-driven development processes."
+    },
+    "features": {
+      "realtime": {
+        "title": "Real-time Data",
+        "description": "Up-to-date project statistics with GitHub API integration"
+      },
+      "discovery": {
+        "title": "Advanced Discovery",
+        "description": "Easily search and filter between projects"
+      }
+    },
+    "community": {
+      "title": "Community Driven",
+      "description": "This project is completely open source and developed with community contributions",
+      "content": "OpenProjects is an open platform where everyone can contribute. We are open to all kinds of contributions from adding projects to developing code, from writing documentation to design improvements.",
+      "viewOnGithub": "View on GitHub",
+      "contribute": "Contribute"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact us for your questions, suggestions or feedback.",
+      "githubIssues": "GitHub Issues"
+    }
+  },
+  "commands": {
+    "searchProjects": "Search projects...",
+    "noResults": "No results found.",
+    "projects": "Projects",
+    "actions": "Actions",
+    "viewAllProjects": "View all projects",
+    "addNewProject": "Add new project",
+    "pages": "Pages",
+    "allProjects": "All projects",
+    "featuredProjects": "Featured projects",
+    "categories": "Categories"
+  },
+  "projectCard": {
+    "featuredProject": "Featured Project",
+    "sponsorProject": "Sponsor Project",
+    "normalProject": "Normal Project",
+    "by": "by",
+    "contributors": "Contributors:",
+    "details": "Details",
+    "github": "GitHub"
+  },
+  "search": {
+    "searchPlaceholder": "Search projects...",
+    "viewAllResults": "View all results",
+    "noResults": "No results found",
+    "projects": "Projects",
+    "pages": "Pages",
+    "recent": "Recent"
+  },
+  "footer": {
+    "description": "OpenProjects is an open source project collection platform that brings together developers and projects from around the world. Our mission is to promote open source software development and foster a global community of contributors."
+  },
+  "submit": {
+    "title": "Add Your Project",
+    "subtitle": "Project Submission",
+    "description": "Share your open source project with the community and get discovered by thousands of developers.",
+    "steps": {
+      "step1": {
+        "title": "Fork the Repository",
+        "description": "Fork the repository on GitHub to copy it to your own account",
+        "button": "Fork Repository"
+      },
+      "step2": {
+        "title": "Add Project Information",
+        "description": "Edit the data/projects.json file to add your project information",
+        "button": "Edit File"
+      },
+      "step3": {
+        "title": "Create Pull Request",
+        "description": "Review your changes and create a pull request",
+        "button": "Create PR"
+      }
+    },
+    "jsonFormat": {
+      "title": "Project JSON Format",
+      "description": "Use the following JSON format when adding your project:"
+    },
+    "guidelines": {
+      "accepted": {
+        "title": "Acceptable Projects",
+        "item1": "Projects with open source license",
+        "item2": "Actively developed projects",
+        "item3": "Projects with documentation",
+        "item4": "Projects useful for the community"
+      },
+      "rejected": {
+        "title": "Unacceptable Projects",
+        "item1": "Closed source projects",
+        "item2": "Abandoned projects",
+        "item3": "Spam or low quality projects",
+        "item4": "Projects with copyright infringement"
+      }
+    },
+    "cta": {
+      "button": "Add Your Project Now"
+    }
+  }
+}

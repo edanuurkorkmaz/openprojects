@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "projects": "Projeler",
+    "featured": "Editörün Seçimi",
+    "categories": "Kategoriler",
+    "about": "Hakkında",
+    "submit": "Proje Ekle",
+    "search": "Ara",
+    "guidelines": "Katkı Rehberi",
+    "becomeSponsor": "Sponsor Ol",
+    "community": "Topluluk",
+    "contact": "İletişim"
+  },
+  "common": {
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "clear": "Temizle",
+    "loading": "Yükleniyor...",
+    "noResults": "Sonuç bulunamadı",
+    "showAll": "Tümünü Göster",
+    "showMore": "Daha Fazla",
+    "language": "Dil",
+    "country": "Ülke",
+    "tags": "Etiketler",
+    "author": "Yazar",
+    "stars": "Yıldızlar",
+    "date": "Tarih",
+    "name": "İsim",
+    "contributors": "Katkıda Bulunanlar",
+    "details": "Detaylar",
+    "viewAll": "Tümünü Görüntüle",
+    "project": "Proje"
+  },
+  "featured": {
+    "title": "Editörün Seçimi",
+    "subtitle": "Öne Çıkan Projeler",
+    "description": "Editörlerimiz tarafından seçilen en popüler ve etkili açık kaynak projeler",
+    "allFeaturedProjects": "Tüm Öne Çıkan Projeler"
+  },
+  "home": {
+    "title": "Açık Kaynak Projeler",
+    "subtitle": "Dünyadaki en iyi açık kaynak projelerini keşfedin",
+    "description": "Geliştiricilerin oluşturduğu açık kaynak projelerini keşfedin, katkıda bulunun ve toplulukla birlikte büyüyün.",
+    "featuredProjects": "Öne Çıkan Projeler",
+    "featuredDesc": "Editörlerimiz tarafından özenle seçilen en popüler ve etkili projeler",
+    "allFeatured": "Tüm Öne Çıkanları Göster",
+    "sponsoredProjects": "Sponsor Projeler",
+    "sponsoredDesc": "Bizi destekleyen sponsorlarımız tarafından geliştirilen açık kaynak projeler",
+    "sponsorProjects": "Destekçilerimiz",
+    "supportedProjects": "Sponsorlarımız",
+    "worldwideProjects": "Dünya Çapında Projeler",
+    "worldwideDesc": "Dünyanın dört bir yanından yenilikçi açık kaynak projeler",
+    "viewAllProjects": "Tüm Projeleri Gör",
+    "sponsors": "Sponsorlarımız",
+    "sponsorsDesc": "Açık kaynak topluluğuna katkıda bulunan ve bu projeyi destekleyen şirketler",
+    "platinumSponsors": "💎 Platin Sponsorlar",
+    "goldSponsors": "🥇 Altın Sponsorlar",
+    "silverSponsors": "🥈 Gümüş Sponsorlar",
+    "contribute": "Katkıda Bulun",
+    "addProject": "Projeni Ekle",
+    "addProjectDesc": "Açık kaynak projenizi toplulukla paylaşın! GitHub'da basit bir PR açarak projenizi listeye ekleyebilir ve binlerce geliştirici tarafından keşfedilmesini sağlayabilirsiniz.",
+    "step1": "1. Fork & Clone",
+    "step1Desc": "Repository'yi fork edin ve yerel makinenize clone edin",
+    "step2": "2. Proje Ekle",
+    "step2Desc": "projects.json dosyasına projenizin bilgilerini ekleyin",
+    "step3": "3. PR Oluştur",
+    "step3Desc": "Pull Request açın ve projenizin yayınlanmasını bekleyin",
+    "addNow": "Hemen Ekle",
+    "contributionGuide": "Katkı Rehberi",
+    "recentProjects": "Son Eklenenler",
+    "newProjects": "Yeni Projeler",
+    "recentDesc": "Topluluk tarafından son eklenen açık kaynak projeler",
+    "supporters": "Destekçilerimiz",
+    "stats": {
+      "projects": "Toplam Proje",
+      "languages": "Programlama Dili",
+      "contributors": "Katkıda Bulunan",
+      "countries": "Ülke"
+    }
+  },
+  "projects": {
+    "title": "Proje Koleksiyonu",
+    "subtitle": "{count} açık kaynak projeyi keşfedin. Arama yapın, filtreleyin ve size uygun projeleri bulun.",
+    "searchPlaceholder": "Proje ara...",
+    "filters": {
+      "languages": "Diller",
+      "countries": "Ülkeler",
+      "tags": "Etiketler",
+      "clearAll": "Filtreleri Temizle"
+    },
+    "sort": {
+      "name": "İsim",
+      "stars": "Yıldız Sayısı",
+      "date": "Tarih",
+      "language": "Dil",
+      "author": "Yazar"
+    },
+    "loadingMore": "Daha fazla proje yükleniyor...",
+    "scrollForMore": "Daha fazla proje için aşağı kaydırın ({remaining} kaldı)",
+    "allShown": "🎉 Tüm {count} proje gösterildi",
+    "stats": {
+      "results": "Sonuç",
+      "shown": "Gösterilen",
+      "sortedBy": "ile sıralı"
+    }
+  },
+  "about": {
+    "title": "OpenProjects",
+    "subtitle": "Dünyanın en büyük açık kaynak proje koleksiyonu. Geliştiriciler için, geliştiriciler tarafından.",
+    "mission": {
+      "title": "Misyonumuz",
+      "description1": "OpenProjects, dünya çapındaki açık kaynak projelerini bir araya getirerek, geliştiricilerin birbirlerinin çalışmalarını keşfetmesini ve katkıda bulunmasını sağlamayı amaçlar.",
+      "description2": "Açık kaynak yazılım geliştirme kültürünü yaygınlaştırmak, geliştiricilerin projelerini dünya çapında tanıtmak ve topluluk odaklı geliştirme süreçlerini desteklemek temel hedeflerimizdir."
+    },
+    "features": {
+      "realtime": {
+        "title": "Gerçek Zamanlı Veriler",
+        "description": "GitHub API entegrasyonu ile güncel proje istatistikleri"
+      },
+      "discovery": {
+        "title": "Gelişmiş Keşif",
+        "description": "Projeler arasında kolayca arama yapın ve filtreleyin"
+      }
+    },
+    "community": {
+      "title": "Topluluk Odaklı",
+      "description": "Bu proje tamamen açık kaynak ve topluluk katkılarıyla geliştirilmektedir",
+      "content": "OpenProjects, herkesin katkıda bulunabileceği açık bir platformdur. Proje eklemekten kod geliştirmeye, dokümantasyon yazmaktan tasarım iyileştirmelerine kadar her türlü katkıya açığız.",
+      "viewOnGithub": "GitHub'da Görüntüle",
+      "contribute": "Katkıda Bulun"
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Sorularınız, önerileriniz veya geri bildirimleriniz için bizimle iletişime geçin.",
+      "githubIssues": "GitHub Issues"
+    }
+  },
+  "commands": {
+    "searchProjects": "Proje ara...",
+    "noResults": "Sonuç bulunamadı.",
+    "projects": "Projeler",
+    "actions": "Eylemler",
+    "viewAllProjects": "Tüm projeleri görüntüle",
+    "addNewProject": "Yeni proje ekle",
+    "pages": "Sayfalar",
+    "allProjects": "Tüm projeler",
+    "featuredProjects": "Öne çıkan projeler",
+    "categories": "Kategoriler"
+  },
+  "projectCard": {
+    "featuredProject": "Öne Çıkarılmış Proje",
+    "sponsorProject": "Sponsor Proje",
+    "normalProject": "Normal Proje",
+    "by": "tarafından",
+    "contributors": "Katkıda Bulunanlar:",
+    "details": "Detaylar",
+    "github": "GitHub"
+  },
+  "search": {
+    "searchPlaceholder": "Proje ara...",
+    "viewAllResults": "Tüm sonuçları görüntüle",
+    "noResults": "Sonuç bulunamadı",
+    "projects": "Projeler",
+    "pages": "Sayfalar",
+    "recent": "Son aramalar"
+  },
+  "footer": {
+    "description": "OpenProjects, açık kaynak projeleri keşfetmek ve katkıda bulunmak için en iyi yerdir. Dünyanın dört bir yanından geliştiricilerle bağlantı kurun, projelerinizi paylaşın ve topluluğa katkıda bulunun."
+  },
+  "submit": {
+    "title": "Projenizi Ekleyin",
+    "subtitle": "Proje Gönderimi",
+    "description": "Açık kaynak projenizi toplulukla paylaşın ve binlerce geliştirici tarafından keşfedilmesini sağlayın.",
+    "steps": {
+      "step1": {
+        "title": "Repository'yi Fork Edin",
+        "description": "GitHub'da repository'yi fork ederek kendi hesabınıza kopyalayın",
+        "button": "Fork Repository"
+      },
+      "step2": {
+        "title": "Proje Bilgilerini Ekleyin",
+        "description": "data/projects.json dosyasını düzenleyerek projenizin bilgilerini ekleyin",
+        "button": "Dosyayı Düzenle"
+      },
+      "step3": {
+        "title": "Pull Request Oluşturun",
+        "description": "Değişikliklerinizi gözden geçirin ve pull request oluşturun",
+        "button": "PR Oluştur"
+      }
+    },
+    "jsonFormat": {
+      "title": "Proje JSON Formatı",
+      "description": "Projenizi eklerken aşağıdaki JSON formatını kullanın:"
+    },
+    "guidelines": {
+      "accepted": {
+        "title": "Kabul Edilecek Projeler",
+        "item1": "Açık kaynak lisansına sahip projeler",
+        "item2": "Aktif olarak geliştirilen projeler",
+        "item3": "Dokümantasyonu olan projeler",
+        "item4": "Topluluk için faydalı projeler"
+      },
+      "rejected": {
+        "title": "Kabul Edilmeyecek Projeler",
+        "item1": "Kapalı kaynak projeler",
+        "item2": "Terk edilmiş projeler",
+        "item3": "Spam veya düşük kaliteli projeler",
+        "item4": "Telif hakkı ihlali içeren projeler"
+      }
+    },
+    "cta": {
+      "button": "Projenizi Şimdi Ekleyin"
+    }
+  }
+}
