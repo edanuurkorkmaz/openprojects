@@ -24,8 +24,8 @@ Help grow our collection by adding your open source project to the platform.
 1. **Fork the Repository**
 
    ```bash
-   git clone https://github.com/furkanczay/open-projects.git
-   cd open-projects
+   git clone https://github.com/furkanczay/openprojects.git
+   cd openprojects
    ```
 
 2. **Add Your Project**
@@ -179,7 +179,7 @@ Please follow our coding standards:
 
 - 📧 Email: support@openprojects.dev
 - 💬 Discord: [Community Server](https://discord.gg/openprojects)
-- 🐛 Issues: [GitHub Issues](https://github.com/furkanczay/open-projects/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/furkanczay/openprojects/issues)
 
 ---
 
@@ -200,8 +200,8 @@ Açık kaynak projenizi platforma ekleyerek koleksiyonumuzun büyümesine yardı
 1. **Repository'yi Fork Edin**
 
    ```bash
-   git clone https://github.com/furkanczay/open-projects.git
-   cd open-projects
+   git clone https://github.com/furkanczay/openprojects.git
+   cd openprojects
    ```
 
 2. **Projenizi Ekleyin**
@@ -359,9 +359,9 @@ Lütfen kodlama standartlarımızı takip edin:
 
 ### 📞 Yardıma İhtiyacınız Var?
 
-- 📧 Email: support@openprojects.dev
-- 💬 Discord: [Topluluk Sunucusu](https://discord.gg/openprojects)
-- 🐛 Sorunlar: [GitHub Issues](https://github.com/furkanczay/open-projects/issues)
+- 📧 Email: contact@czay.dev
+- 💬 Discord: [Topluluk Sunucusu](https://discord.gg/SkundF4FFU)
+- 🐛 Sorunlar: [GitHub Issues](https://github.com/furkanczay/openprojects/issues)
 
 ---
 
