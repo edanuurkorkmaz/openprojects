@@ -74,8 +74,6 @@ export default function ProjectsPage() {
         return (
           project.name.toLowerCase().includes(query) ||
           project.description.toLowerCase().includes(query) ||
-          (project.author?.toLowerCase() || "").includes(query) ||
-          (project.language?.toLowerCase() || "").includes(query) ||
           project.tags.some((tag: string) => tag.toLowerCase().includes(query))
         );
       });

@@ -49,7 +49,7 @@ export default async function ProjectPage({
                 {project.description}
               </p>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <span>by {project.author}</span>
+                <span>by {repoInfo?.owner}</span>
               </div>
             </div>
             {project.featured && (
@@ -202,12 +202,6 @@ export default async function ProjectPage({
                 <CardTitle>Project Info</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <div className="text-sm font-medium text-muted-foreground">
-                    Language
-                  </div>
-                  <div className="font-semibold">{project.language}</div>
-                </div>{" "}
                 <div>
                   <div className="text-sm font-medium text-muted-foreground">
                     Last Updated

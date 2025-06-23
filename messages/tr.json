@@ -214,5 +214,41 @@
     "cta": {
       "button": "Projenizi Şimdi Ekleyin"
     }
+  },
+  "categories": {
+    "title": "Kategoriler",
+    "subtitle": "Projelerimizi kategorilere göre keşfedin ve ilginizi çeken alanları bulun",
+    "activeCategory": "Aktif Kategori",
+    "totalProjects": "Toplam Proje",
+    "viewProjects": "Projeleri Görüntüle",
+    "addProject": "Projenizi Ekleyin",
+    "addProjectDesc": "Geliştirdiğiniz açık kaynak projeyi toplulukla paylaşın ve uygun kategoride yer almasını sağlayın.",
+    "submitProject": "Proje Gönder",
+    "names": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Framework": "Framework",
+      "Library": "Kütüphane",
+      "Mobile": "Mobil",
+      "Database": "Veritabanı",
+      "Tool": "Araç",
+      "Authentication": "Kimlik Doğrulama",
+      "Application": "Uygulama",
+      "DevOps": "DevOps",
+      "Other": "Diğer"
+    },
+    "descriptions": {
+      "Frontend": "Kullanıcı arayüzü ve deneyimi için geliştirilmiş projeler",
+      "Backend": "Sunucu tarafı geliştirme ve API projeleri",
+      "Framework": "Geliştirme sürecini hızlandıran framework'ler",
+      "Library": "Yeniden kullanılabilir kod kütüphaneleri",
+      "Mobile": "Mobil uygulama geliştirme projeleri",
+      "Database": "Veri yönetimi ve depolama çözümleri",
+      "Tool": "Geliştirici araçları ve yardımcı programlar",
+      "Authentication": "Kimlik doğrulama ve güvenlik çözümleri",
+      "Application": "Tam özellikli uygulamalar ve platformlar",
+      "DevOps": "Dağıtım, containerization ve CI/CD araçları",
+      "Other": "Diğer kategorilere girmeyen çeşitli projeler"
+    }
   }
 }

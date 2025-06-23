@@ -37,17 +37,13 @@ export function Header() {
   const commandFilteredProjects = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase();
-    return projects
-      .filter((project) => {
-        return (
-          project.name.toLowerCase().includes(query) ||
-          project.description.toLowerCase().includes(query) ||
-          project.author.toLowerCase().includes(query) ||
-          project.language.toLowerCase().includes(query) ||
-          project.tags.some((tag: string) => tag.toLowerCase().includes(query))
-        );
-      })
-      .slice(0, 8); // En fazla 8 sonuç göster
+    return projects.filter((project) => {
+      return (
+        project.name.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.tags.some((tag: string) => tag.toLowerCase().includes(query))
+      );
+    });
   }, [searchQuery]);
 
   // Keyboard shortcut için
@@ -83,7 +79,7 @@ export function Header() {
         />
         <CommandList>
           <CommandEmpty>{t("commands.noResults")}</CommandEmpty>
-          {commandFilteredProjects.length > 0 && (
+          {commandFilteredProjects?.length > 0 && (
             <CommandGroup heading={t("commands.projects")}>
               {commandFilteredProjects.map((project) => (
                 <CommandItem
@@ -112,9 +108,6 @@ export function Header() {
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {project.language}
-                    </Badge>
                     {project.country && (
                       <CircleFlag
                         countryCode={project.country.toLowerCase()}

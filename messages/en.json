@@ -214,5 +214,41 @@
     "cta": {
       "button": "Add Your Project Now"
     }
+  },
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Explore our projects by categories and find the areas that interest you",
+    "activeCategory": "Active Category",
+    "totalProjects": "Total Projects",
+    "viewProjects": "View Projects",
+    "addProject": "Add Your Project",
+    "addProjectDesc": "Share your open source project with the community and have it featured in the appropriate category.",
+    "submitProject": "Submit Project",
+    "names": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Framework": "Framework",
+      "Library": "Library",
+      "Mobile": "Mobile",
+      "Database": "Database",
+      "Tool": "Tool",
+      "Authentication": "Authentication",
+      "Application": "Application",
+      "DevOps": "DevOps",
+      "Other": "Other"
+    },
+    "descriptions": {
+      "Frontend": "Projects developed for user interface and experience",
+      "Backend": "Server-side development and API projects",
+      "Framework": "Frameworks that accelerate the development process",
+      "Library": "Reusable code libraries",
+      "Mobile": "Mobile application development projects",
+      "Database": "Data management and storage solutions",
+      "Tool": "Developer tools and utilities",
+      "Authentication": "Authentication and security solutions",
+      "Application": "Full-featured applications and platforms",
+      "DevOps": "Deployment, containerization and CI/CD tools",
+      "Other": "Various projects that don't fit into other categories"
+    }
   }
 }

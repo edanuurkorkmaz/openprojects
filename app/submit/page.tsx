@@ -124,17 +124,13 @@ export default async function SubmitPage() {
           <CardContent>
             <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
               {`{
-  "name": "Project Name",
-  "description": "Brief description of your project",
-  "githubUrl": "https://github.com/username/repository",
-  "website": "https://project-website.com",
-  "language": "JavaScript",
-  "tags": ["react", "nextjs", "typescript"],
-  "author": "Your GitHub Username",
-  "category": "Frontend",
-  "country": "TR",
-  "featured": false,
-  "createdAt": "2024-01-01"
+  name: "React",
+  description: "A JavaScript library for building user interfaces",
+  longDescription: "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.",
+  githubUrl: "https://github.com/facebook/react",
+  website: "https://reactjs.org",
+  tags: ["frontend", "framework", "javascript", "ui"],
+  category: ProjectCategory.Framework,
 }`}
             </pre>
           </CardContent>

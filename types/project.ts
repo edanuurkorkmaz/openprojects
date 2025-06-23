@@ -5,12 +5,10 @@ export type Project = {
   githubUrl: string;
   website?: string;
   country?: string;
-  author: string;
   sponsor?: ProjectSponsor;
   featured?: boolean;
   tags: string[];
   category: ProjectCategory;
-  language: string;
 };
 
 export enum ProjectCategory {

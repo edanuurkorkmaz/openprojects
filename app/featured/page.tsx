@@ -18,23 +18,13 @@ export default function FeaturedPage() {
   const featuredProjects = allProjects.filter((project) => project.featured);
 
   const [search, setSearch] = useState("");
-  const [selectedLanguage, setSelectedLanguage] = useState("");
-
-  const languages = Array.from(
-    new Set(featuredProjects.map((p) => p.language))
-  ).sort();
   const filterProjects = (projects: Project[]) => {
     return projects.filter((project) => {
       const matchesSearch =
         !search ||
         project.name.toLowerCase().includes(search.toLowerCase()) ||
-        project.description.toLowerCase().includes(search.toLowerCase()) ||
-        project.author.toLowerCase().includes(search.toLowerCase());
-
-      const matchesLanguage =
-        !selectedLanguage || project.language === selectedLanguage;
-
-      return matchesSearch && matchesLanguage;
+        project.description.toLowerCase().includes(search.toLowerCase());
+      return matchesSearch;
     });
   };
   const filteredAll = filterProjects(featuredProjects);
@@ -42,12 +32,6 @@ export default function FeaturedPage() {
   const activeFilters = [
     search
       ? { label: `Arama: "${search}"`, onRemove: () => setSearch("") }
-      : null,
-    selectedLanguage
-      ? {
-          label: `Dil: ${selectedLanguage}`,
-          onRemove: () => setSelectedLanguage(""),
-        }
       : null,
   ].filter((f): f is { label: string; onRemove: () => void } => Boolean(f));
   const t = useTranslations("featured");
@@ -84,18 +68,6 @@ export default function FeaturedPage() {
                 onChange={(e) => setSearch(e.target.value)}
                 className="flex-1 min-w-0 max-w-[300px]"
               />
-              <select
-                value={selectedLanguage}
-                onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="border rounded-md px-3 py-2 text-sm bg-background shrink-0"
-              >
-                <option value="">Tüm Diller</option>
-                {languages.map((lang) => (
-                  <option key={lang} value={lang}>
-                    {lang}
-                  </option>
-                ))}
-              </select>
             </div>
 
             {/* Active Filters */}
@@ -117,7 +89,6 @@ export default function FeaturedPage() {
                   size="sm"
                   onClick={() => {
                     setSearch("");
-                    setSelectedLanguage("");
                   }}
                   className="h-6 px-2 text-xs"
                 >
