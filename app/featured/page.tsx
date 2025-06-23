@@ -60,30 +60,19 @@ export default function FeaturedPage() {
         {/* Filtreler ve Sekmeler */}
         <div className="mb-8 space-y-4">
           {/* Filters */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <div className="flex flex-col gap-4 items-center justify-center">
             <div className="flex items-center gap-3 w-full overflow-x-auto">
               <Input
                 placeholder="Proje ara..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="flex-1 min-w-0 max-w-[300px]"
+                className="flex-1 min-w-0 max-w-[300px] mx-auto"
               />
             </div>
 
             {/* Active Filters */}
             {activeFilters.length > 0 && (
               <div className="flex flex-wrap gap-2 items-center">
-                {activeFilters.map((filter, i) => (
-                  <Badge
-                    key={i}
-                    variant="secondary"
-                    className="flex items-center gap-1 cursor-pointer hover:bg-destructive hover:text-destructive-foreground transition-colors"
-                    onClick={filter.onRemove}
-                  >
-                    {filter.label}
-                    <span className="ml-1 text-xs">✕</span>
-                  </Badge>
-                ))}
                 <Button
                   variant="outline"
                   size="sm"
@@ -92,7 +81,7 @@ export default function FeaturedPage() {
                   }}
                   className="h-6 px-2 text-xs"
                 >
-                  Tümünü Temizle
+                  Temizle
                 </Button>
               </div>
             )}
@@ -116,17 +105,6 @@ export default function FeaturedPage() {
             </div>
           </section>
         ) : (
-          <div className="text-center text-muted-foreground py-12">
-            <Award className="w-16 h-16 mx-auto mb-4 opacity-50" />
-            <h3 className="text-lg font-medium mb-2">Sonuç bulunamadı</h3>
-            <p>
-              Kriterlere uygun proje bulunamadı. Filtreleri değiştirmeyi
-              deneyin.
-            </p>
-          </div>
-        )}
-        {/* Empty State - Hiç featured proje yoksa */}
-        {featuredProjects.length === 0 && (
           <div className="text-center py-16">
             <div className="mb-6">
               <div className="p-4 rounded-full bg-muted/50 w-fit mx-auto mb-4">
