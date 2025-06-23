@@ -99,17 +99,17 @@ export default function FeaturedPage() {
         <div className="mb-8 space-y-4">
           {/* Filters */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <div className="flex gap-3 items-center">
+            <div className="flex items-center gap-3 w-full overflow-x-auto">
               <Input
                 placeholder="Proje ara..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-64"
+                className="flex-1 min-w-0 max-w-[300px]"
               />
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="border rounded-md px-3 py-2 text-sm bg-background min-w-[120px]"
+                className="border rounded-md px-3 py-2 text-sm bg-background shrink-0"
               >
                 <option value="">Tüm Diller</option>
                 {languages.map((lang) => (
