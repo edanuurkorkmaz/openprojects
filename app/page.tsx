@@ -147,7 +147,7 @@ export default async function HomePage() {
             </div>
             <div className="relative">
               <Carousel className="w-full">
-                <CarouselPrevious className="absolute -left-16 top-1/2 -translate-y-1/2 z-30 bg-background/80 backdrop-blur border border-border shadow-lg hover:bg-primary hover:text-white transition-colors w-12 h-12 text-2xl rounded-full flex items-center justify-center" />
+                <CarouselPrevious className="hidden md:flex absolute -left-16 top-1/2 -translate-y-1/2 z-30 bg-background/80 backdrop-blur border border-border shadow-lg hover:bg-primary hover:text-white transition-colors w-12 h-12 text-2xl rounded-full items-center justify-center" />
                 <CarouselContent className="-ml-4">
                   {featuredProjects.slice(0, 10).map((project) => (
                     <CarouselItem
@@ -162,7 +162,7 @@ export default async function HomePage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselNext className="absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-background/80 backdrop-blur border border-border shadow-lg hover:bg-primary hover:text-white transition-colors w-12 h-12 text-2xl rounded-full flex items-center justify-center" />
+                <CarouselNext className="hidden md:flex absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-background/80 backdrop-blur border border-border shadow-lg hover:bg-primary hover:text-white transition-colors w-12 h-12 text-2xl rounded-full items-center justify-center" />
               </Carousel>
             </div>
             <div>

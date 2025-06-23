@@ -108,7 +108,7 @@ export function ProjectCard({
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`h-full ${className}`}
     >
-      <Card className={`rounded-2xl flex flex-col`}>
+      <Card className={`rounded-2xl flex flex-col `}>
         <CardHeader className="space-y-4">
           <div className="flex items-start justify-between">
             <div className="space-y-2">
