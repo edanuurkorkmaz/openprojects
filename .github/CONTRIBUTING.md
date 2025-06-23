@@ -31,17 +31,17 @@ Help grow our collection by adding your open source project to the platform.
 2. **Add Your Project**
    Edit `data/projects.ts` and add your project information:
 
-   ```json
+   ```typescript
    {
-     "name": "Your Project Name",
-     "description": "Brief description of your project",
-     "githubUrl": "https://github.com/username/repository",
-     "website": "https://your-project.com",
-     "language": "JavaScript",
-     "tags": ["react", "nextjs", "typescript"],
-     "author": "Your GitHub Username",
-     "category": "Frontend",
-     "country": "US" // optional -- uses circleflag
+     name: "Project Name",
+     description: "Project Summary",
+     githubUrl: "https://github.com/username|organization/repository",
+     website: "https://project.com",
+     language: "JavaScript",
+     tags: ["react", "nextjs", "typescript"],
+     author: "Github Username|Organization",
+     category: "Frontend",
+     country: "TR" // Country code TR | US etc.,
    }
    ```
 
@@ -207,23 +207,17 @@ Açık kaynak projenizi platforma ekleyerek koleksiyonumuzun büyümesine yardı
 2. **Projenizi Ekleyin**
    `data/projects.ts` dosyasını düzenleyin ve proje bilgilerinizi ekleyin:
 
-   ```json
+   ```typescript
    {
-     "name": "Proje Adınız",
-     "description": "Projenizin kısa açıklaması",
-     "githubUrl": "https://github.com/kullanici/repository",
-     "website": "https://projeniz.com",
-     "language": "JavaScript",
-     "tags": ["react", "nextjs", "typescript"],
-     "author": "GitHub Kullanıcı Adınız",
-     "category": "Frontend",
-     "country": "TR",
-     "featured": false,
-     "sponsor": {
-       "enabled": false,
-       "type": "platinum"
-     },
-     "createdAt": "2024-01-01"
+     name: "Proje Adınız",
+     description: "Projenizin kısa açıklaması",
+     githubUrl: "https://github.com/kullanici/repository",
+     website: "https://projeniz.com",
+     language: "JavaScript",
+     tags: ["react", "nextjs", "typescript"],
+     author: "GitHub Kullanıcı Adınız",
+     category: "Frontend",
+     country: "TR" // Ülke Kodu TR | US vb.,
    }
    ```
 
