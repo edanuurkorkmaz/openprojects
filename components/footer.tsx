@@ -2,8 +2,6 @@ import {
   Github,
   Heart,
   Twitter,
-  Mail,
-  Globe,
   Plus,
   Crown,
   MessageCircle,

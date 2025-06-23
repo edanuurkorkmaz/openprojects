@@ -11,11 +11,12 @@ import {
 import {
   Github,
   Sparkles,
-  Crown,
   Folder,
   Diamond,
   Medal,
   Award,
+  Star,
+  GitFork,
 } from "lucide-react";
 import Link from "next/link";
 import { getCountryName, getRepoInfo } from "@/lib/utils";
@@ -30,6 +31,7 @@ import {
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Project, ProjectSponsor } from "@/types/project";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -64,18 +66,8 @@ const getCategoryColor = (category: string) => {
 
 export function ProjectCard({ project, className = "" }: ProjectCardProps) {
   const t = useTranslations("projectCard");
-  const tCommon = useTranslations("common");
 
   const repoInfo = getRepoInfo(project.githubUrl);
-
-  const cardClasses = {
-    default:
-      "group hover:shadow-xl transition-all duration-300 border-0 bg-white/90 dark:bg-slate-900/80 hover:-translate-y-1",
-    featured:
-      "group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-blue-50/90 to-cyan-100/90 dark:from-blue-950/70 dark:to-cyan-950/70 hover:-translate-y-1 ring-2 ring-blue-300 dark:ring-cyan-700",
-    sponsor:
-      "group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-teal-50/90 to-emerald-100/90 dark:from-teal-950/70 dark:to-emerald-950/70 hover:-translate-y-1 ring-2 ring-teal-300 dark:ring-emerald-700",
-  };
 
   return (
     <motion.div
@@ -140,9 +132,9 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
                 <Link
                   target="_blank"
                   className="ml-1 hover:underline"
-                  href={"https://github.com/" + project.author}
+                  href={"https://github.com/" + repoInfo?.owner}
                 >
-                  {project.author}
+                  {repoInfo?.owner}
                 </Link>
               </CardDescription>
               <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
@@ -176,17 +168,25 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
             </div>{" "}
             <div className="flex flex-col items-end gap-2">
               {repoInfo && (
-                <div className="flex flex-col gap-2 items-center justify-end text-md">
-                  <img
-                    src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=Stars&color=blue&labelColor=gray`}
-                    alt="GitHub stars"
-                    className="h-5 w-full"
-                  />
-                  <img
-                    src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=Forks&color=blue&labelColor=gray`}
-                    alt="GitHub forks"
-                    className="h-5 w-full"
-                  />
+                <div className="flex flex-col gap-2 items-center justify-end">
+                  <Badge variant={"secondary"}>
+                    <Star className="fill-yellow-500 text-yellow-500 w-4 h-4" />
+                    <Image
+                      src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
+                      alt="GitHub stars"
+                      width={50}
+                      height={10}
+                    />
+                  </Badge>
+                  <Badge variant={"secondary"}>
+                    <GitFork className="w-4 h-4" />
+                    <Image
+                      src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
+                      alt="GitHub forks"
+                      width={50}
+                      height={10}
+                    />
+                  </Badge>
                 </div>
               )}
             </div>

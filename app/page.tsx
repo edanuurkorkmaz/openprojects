@@ -1,15 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  ExternalLink,
-  Github,
-  Sparkles,
-  Crown,
-  Award,
-  Diamond,
-  Medal,
-  Trophy,
-} from "lucide-react";
+import { ExternalLink, Github, Sparkles, Crown } from "lucide-react";
 import Link from "next/link";
 import projects from "@/data/projects";
 import { ProjectCard } from "@/components/project-card";
@@ -100,7 +91,7 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sponsorProjects.length === 0 && (
+            {sponsorProjects?.length === 0 && (
               <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center">
                 <p className="text-lg text-muted-foreground">
                   {t("noSponsorProjects")}
@@ -108,7 +99,7 @@ export default async function HomePage() {
               </div>
             )}
             {sponsorProjects
-              .sort((a, b) => {
+              ?.sort((a, b) => {
                 const order: Record<string, number> = {
                   platinum: 0,
                   gold: 1,
@@ -155,7 +146,6 @@ export default async function HomePage() {
                       className="pl-4 md:basis-1/2 lg:basis-1/3"
                     >
                       <ProjectCard
-                        hideContributors
                         project={project as Project}
                         className="h-full"
                       />

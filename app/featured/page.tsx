@@ -1,11 +1,4 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Award, ExternalLink } from "lucide-react";
@@ -13,38 +6,24 @@ import Link from "next/link";
 import projects from "@/data/projects";
 import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
-import { CircleFlag } from "react-circle-flags";
 import { useTranslations } from "next-intl";
+import { Project } from "@/types/project";
 
-// `projects.ts` can either export the array directly **or**
-// an object `{ projects: [...] }`.  Normalise so we always get an array.
 const allProjects = Array.isArray(projects)
   ? projects
-  : (projects as { projects: any[] }).projects ?? [];
+  : (projects as { projects: Project[] }).projects ?? [];
 
 export default function FeaturedPage() {
   const featuredProjects = allProjects.filter((project) => project.featured);
-  const turkishFeatured = featuredProjects.filter(
-    (project) => project.country === "TR"
-  );
-  const internationalFeatured = featuredProjects.filter(
-    (project) => project.country !== "TR"
-  );
 
-  // Filtreleme için state'ler
-  const [activeTab, setActiveTab] = useState("all");
   const [search, setSearch] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
-  // Dil seçeneklerini çıkar (featured projelerden)
   const languages = Array.from(
     new Set(featuredProjects.map((p) => p.language))
   ).sort();
-
-  // Filtreleme fonksiyonu
-  const filterProjects = (projects: any[]) => {
+  const filterProjects = (projects: Project[]) => {
     return projects.filter((project) => {
       const matchesSearch =
         !search ||
@@ -60,7 +39,6 @@ export default function FeaturedPage() {
   };
   const filteredAll = filterProjects(featuredProjects);
 
-  // Aktif filtreler
   const activeFilters = [
     search
       ? { label: `Arama: "${search}"`, onRemove: () => setSearch("") }

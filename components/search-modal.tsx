@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, Github, ExternalLink } from "lucide-react";
 import { useDebounce } from "@/hooks/use-debounce";
-import { getCountryFlag } from "@/lib/github";
+import { getCountryFlag } from "@/lib/utils";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -40,7 +40,6 @@ export function SearchModal({ projects }: SearchModalProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const debouncedSearch = useDebounce(searchQuery, 300);
   const t = useTranslations("search");
-  const tNav = useTranslations("navigation");
 
   const filteredProjects = useMemo(() => {
     if (!debouncedSearch.trim()) return [];
@@ -125,9 +124,9 @@ export function SearchModal({ projects }: SearchModalProps) {
           ) : filteredProjects.length === 0 ? (
             <div className="p-6 text-center text-muted-foreground">
               <Search className="w-12 h-12 mx-auto mb-4 opacity-50" />
-              <p className="text-lg font-medium mb-2">Sonuç bulunamadı</p>
+              <p className="text-lg font-medium mb-2">Sonuç bulunamadı</p>{" "}
               <p className="text-sm">
-                "{debouncedSearch}" için herhangi bir proje bulunamadı
+                &quot;{debouncedSearch}&quot; için herhangi bir proje bulunamadı
               </p>
             </div>
           ) : (

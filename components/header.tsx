@@ -2,20 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Github,
-  Menu,
-  Moon,
-  Sun,
-  Award,
-  Search,
-  ExternalLink,
-} from "lucide-react";
+import { Github, Moon, Sun, Award, Search, ExternalLink } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import {
-  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -27,7 +18,6 @@ import {
 } from "@/components/ui/command";
 import { CircleFlag } from "react-circle-flags";
 import projects from "@/data/projects";
-import { useDebounce } from "@/hooks/use-debounce";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -40,11 +30,8 @@ export function Header() {
   const [commandOpen, setCommandOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
-
   // Translations
   const t = useTranslations();
-
-  const debouncedSearch = useDebounce(searchQuery, 300);
 
   // Command search için filtered projects
   const commandFilteredProjects = useMemo(() => {

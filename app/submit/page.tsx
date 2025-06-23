@@ -20,7 +20,6 @@ import { getTranslations } from "next-intl/server";
 
 export default async function SubmitPage() {
   const t = await getTranslations("submit");
-  const tNav = await getTranslations("navigation");
 
   return (
     <div className="min-h-screen bg-background py-12 px-4">

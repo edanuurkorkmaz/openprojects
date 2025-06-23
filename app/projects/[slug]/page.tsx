@@ -1,12 +1,20 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, Users } from "lucide-react";
+import {
+  ExternalLink,
+  GitFork,
+  Github,
+  Star,
+  Users,
+  Users2,
+} from "lucide-react";
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import projects from "@/data/projects";
 import { Project } from "@/types/project";
 import { getRepoInfo } from "@/lib/utils";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -58,32 +66,40 @@ export default async function ProjectPage({
             {repoInfo && (
               <>
                 <div className="flex items-center gap-2">
-                  <img
-                    src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&logo=github&label=stars&color=blue&labelColor=gray`}
-                    alt="GitHub stars"
-                    className="h-6"
-                  />
+                  <Badge variant={"secondary"}>
+                    <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    <Image
+                      src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
+                      alt="GitHub stars"
+                      width={50}
+                      height={10}
+                      className="h-7"
+                    />
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <img
-                    src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&logo=github&label=forks&color=blue&labelColor=gray`}
-                    alt="GitHub forks"
-                    className="h-6"
-                  />
+                  <Badge variant={"secondary"}>
+                    <GitFork className="w-4 h-4" />
+                    <Image
+                      src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
+                      alt="GitHub forks"
+                      width={50}
+                      height={10}
+                      className="h-7"
+                    />
+                  </Badge>
                 </div>{" "}
                 <div className="flex items-center gap-2">
-                  <img
-                    src={`https://img.shields.io/github/contributors/${repoInfo.owner}/${repoInfo.repo}?style=flat&logo=github&label=contributors&color=green&labelColor=gray`}
-                    alt="GitHub contributors"
-                    className="h-6"
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <img
-                    src={`https://img.shields.io/github/languages/top/${repoInfo.owner}/${repoInfo.repo}?style=flat&logo=github&label=language&color=orange&labelColor=gray`}
-                    alt="GitHub language"
-                    className="h-6"
-                  />
+                  <Badge variant={"secondary"}>
+                    <Users2 className="w-4 h-4" />
+                    <Image
+                      src={`https://img.shields.io/github/contributors/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
+                      alt="GitHub contributors"
+                      width={50}
+                      height={10}
+                      className="h-7"
+                    />
+                  </Badge>
                 </div>
               </>
             )}
