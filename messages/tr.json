@@ -118,7 +118,7 @@
     "features": {
       "realtime": {
         "title": "Gerçek Zamanlı Veriler",
-        "description": "GitHub API entegrasyonu ile güncel proje istatistikleri"
+        "description": "Shields.io ve contrib.rocks entegrasyonu ile GitHub istatistikleri"
       },
       "discovery": {
         "title": "Gelişmiş Keşif",

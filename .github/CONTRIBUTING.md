@@ -33,15 +33,13 @@ Help grow our collection by adding your open source project to the platform.
 
    ```typescript
    {
-     name: "Project Name",
-     description: "Project Summary",
-     githubUrl: "https://github.com/username|organization/repository",
-     website: "https://project.com",
-     language: "JavaScript",
-     tags: ["react", "nextjs", "typescript"],
-     author: "Github Username|Organization",
-     category: "Frontend",
-     country: "TR" // Country code TR | US etc.,
+    name: "NoobGG",
+    description: "A platform for gamers to connect and play together",
+    longDescription:
+      "NoobGG is a community-driven platform that connects gamers, allowing them to find teammates, join games, and share experiences.",
+    githubUrl: "https://github.com/noobgg-team/noobgg",
+    tags: ["gaming", "community", "platform"],
+    category: ProjectCategory.Application,
    }
    ```
 
@@ -209,15 +207,13 @@ Açık kaynak projenizi platforma ekleyerek koleksiyonumuzun büyümesine yardı
 
    ```typescript
    {
-     name: "Proje Adınız",
-     description: "Projenizin kısa açıklaması",
-     githubUrl: "https://github.com/kullanici/repository",
-     website: "https://projeniz.com",
-     language: "JavaScript",
-     tags: ["react", "nextjs", "typescript"],
-     author: "GitHub Kullanıcı Adınız",
-     category: "Frontend",
-     country: "TR" // Ülke Kodu TR | US vb.,
+    name: "NoobGG",
+    description: "A platform for gamers to connect and play together",
+    longDescription:
+      "NoobGG is a community-driven platform that connects gamers, allowing them to find teammates, join games, and share experiences.",
+    githubUrl: "https://github.com/noobgg-team/noobgg",
+    tags: ["gaming", "community", "platform"],
+    category: ProjectCategory.Application,
    }
    ```
 

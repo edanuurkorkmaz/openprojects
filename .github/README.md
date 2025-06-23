@@ -25,11 +25,11 @@ A modern platform for discovering, exploring, and contributing to the best open 
 - 🌍 **Multi-language Support**: Turkish and English interface
 - 🔍 **Advanced Search**: Filter by category, language, and tags
 - ⭐ **Featured Projects**: Carefully curated outstanding projects
-- � **Sponsor System**: Platinum, Gold, and Silver sponsor tiers
+- 💎 **Sponsor System**: Platinum, Gold, and Silver sponsor tiers
 - 👥 **Contributors**: Beautiful contributor visualization with contrib.rocks
 - 📱 **Responsive Design**: Perfect experience on all devices
-- � **Modern UI/UX**: Tailwind CSS with Framer Motion animations
-- 🔄 **Real-time GitHub Data**: Live stars, forks, and contributor counts
+- 🎨 **Modern UI/UX**: Tailwind CSS with Framer Motion animations
+- 🔄 **GitHub Data**: Live stars, forks, contributors via shields.io
 
 ## 🚀 Quick Start
 

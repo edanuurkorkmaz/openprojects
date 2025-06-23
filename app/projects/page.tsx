@@ -195,7 +195,7 @@ export default function ProjectsPage() {
           bValue = b.name.toLowerCase();
           break;
         case "stars":
-          // For demo purposes, we'll use a mock star count based on project id
+          // Shields.io kullanan projeler için mock star count
           aValue = a.id * 1000 + Math.random() * 5000;
           bValue = b.id * 1000 + Math.random() * 5000;
           break;

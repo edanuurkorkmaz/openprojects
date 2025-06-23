@@ -1,11 +1,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, Star, GitFork, Users } from "lucide-react";
+import { ExternalLink, Github, Users } from "lucide-react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import projects from "@/data/projects";
 import { Project } from "@/types/project";
+import { getRepoInfo } from "@/lib/utils";
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -22,23 +23,11 @@ export default async function ProjectPage({
   const project: Project | undefined = projects.find(
     (p) => p.name.toLowerCase().replace(/\s+/g, "-") === slug
   );
-
   if (!project) {
     notFound();
   }
 
-  const response = await fetch(
-    `${
-      process.env.NEXT_PUBLIC_BASE_URL
-    }/api/github-data?githubUrl=${encodeURIComponent(project.githubUrl)}`
-  )
-    .then((res) => res.json())
-    .catch((error) => {
-      console.error("Error fetching GitHub data:", error);
-      return { repoData: null, contributors: [] };
-    });
-
-  const { repoData, contributors } = response;
+  const repoInfo = getRepoInfo(project.githubUrl);
 
   return (
     <div className="min-h-screen bg-background">
@@ -63,31 +52,42 @@ export default async function ProjectPage({
                 ⭐ Featured
               </Badge>
             )}
-          </div>
-
+          </div>{" "}
           {/* Stats */}
           <div className="flex gap-6 mb-6">
-            <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">
-                {repoData?.stargazers_count?.toLocaleString() ?? "0"}
-              </span>
-              <span className="text-muted-foreground">stars</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <GitFork className="w-5 h-5 text-blue-500" />
-              <span className="font-semibold">
-                {repoData?.forks_count?.toLocaleString() ?? "0"}
-              </span>
-              <span className="text-muted-foreground">forks</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-green-500" />
-              <span className="font-semibold">{contributors.length}</span>
-              <span className="text-muted-foreground">contributors</span>
-            </div>
+            {repoInfo && (
+              <>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&logo=github&label=stars&color=blue&labelColor=gray`}
+                    alt="GitHub stars"
+                    className="h-6"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&logo=github&label=forks&color=blue&labelColor=gray`}
+                    alt="GitHub forks"
+                    className="h-6"
+                  />
+                </div>{" "}
+                <div className="flex items-center gap-2">
+                  <img
+                    src={`https://img.shields.io/github/contributors/${repoInfo.owner}/${repoInfo.repo}?style=flat&logo=github&label=contributors&color=green&labelColor=gray`}
+                    alt="GitHub contributors"
+                    className="h-6"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={`https://img.shields.io/github/languages/top/${repoInfo.owner}/${repoInfo.repo}?style=flat&logo=github&label=language&color=orange&labelColor=gray`}
+                    alt="GitHub language"
+                    className="h-6"
+                  />
+                </div>
+              </>
+            )}
           </div>
-
           {/* Actions */}
           <div className="flex gap-3">
             <Button asChild size="lg">
@@ -141,58 +141,36 @@ export default async function ProjectPage({
                   ))}
                 </div>
               </CardContent>
-            </Card>
+            </Card>{" "}
             {/* Contributors */}
-            {contributors.length > 0 && (
+            {repoInfo && (
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Users className="w-5 h-5" />
-                    Contributors ({contributors.length})
+                    Contributors
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
-                    {/* Individual contributor cards */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                      {contributors
-                        .slice(0, 12)
-                        .map((contributor: any, idx: number) => (
-                          <Link
-                            key={contributor.id || contributor.login || idx}
-                            href={contributor.html_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group"
-                          >
-                            <div className="flex flex-col items-center p-3 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-200 hover:scale-105 hover:shadow-md">
-                              <img
-                                src={contributor.avatar_url}
-                                alt={contributor.login}
-                                className="w-12 h-12 rounded-full border-2 border-background shadow-sm group-hover:border-primary/50 transition-colors mb-2"
-                              />
-                              <div className="text-center">
-                                <p className="text-xs font-medium truncate w-full group-hover:text-primary transition-colors">
-                                  {contributor.login}
-                                </p>
-                                <p className="text-xs text-muted-foreground">
-                                  {contributor.contributions} commits
-                                </p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
+                  <div className="space-y-4">
+                    {/* Contrib.rocks image */}
+                    <div className="flex justify-center">
+                      <img
+                        src={`https://contrib.rocks/image?repo=${repoInfo.owner}/${repoInfo.repo}&max=500&columns=20&anon=1`}
+                        alt="Contributors"
+                        className="rounded-lg shadow-sm"
+                      />
                     </div>
 
                     <div className="text-center">
                       <Button asChild variant="outline" size="sm">
                         <Link
-                          href={`${project.githubUrl}/graphs/contributors`}
+                          href={`${project.githubUrl}/contributors`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <Users className="w-4 h-4 mr-2" />
-                          View all Contributors
+                          View All Contributors
                         </Link>
                       </Button>
                     </div>
@@ -213,17 +191,19 @@ export default async function ProjectPage({
                     Language
                   </div>
                   <div className="font-semibold">{project.language}</div>
-                </div>
+                </div>{" "}
                 <div>
                   <div className="text-sm font-medium text-muted-foreground">
                     Last Updated
                   </div>
                   <div className="font-semibold">
-                    {repoData?.updated_at
-                      ? new Date(repoData.updated_at).toLocaleDateString(
-                          "tr-TR"
-                        )
-                      : "-"}
+                    {repoInfo && (
+                      <img
+                        src={`https://img.shields.io/github/last-commit/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=blue&labelColor=gray`}
+                        alt="Last commit"
+                        className="h-5"
+                      />
+                    )}
                   </div>
                 </div>
                 <div>

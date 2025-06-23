@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Filter, X, Globe, Code, Tag } from "lucide-react";
-import { getCountryFlag, getCountryName } from "@/lib/github";
+import { getCountryFlag, getCountryName } from "@/lib/utils";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 

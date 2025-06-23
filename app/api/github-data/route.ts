@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getRepoData, getRepoContributors } from "@/lib/github";
+import { getRepoContributors } from "@/lib/github";
+import { getCachedData, setCachedData } from "@/lib/github-cache";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -10,12 +11,24 @@ export async function GET(req: NextRequest) {
       { status: 400 }
     );
   }
+
   try {
-    const [repoData, contributors] = await Promise.all([
-      getRepoData(githubUrl),
-      getRepoContributors(githubUrl, 12),
-    ]);
-    return NextResponse.json({ repoData, contributors });
+    // Cache kontrolü
+    const cacheKey = `api-${githubUrl}`;
+    const cachedResult = getCachedData(cacheKey);
+
+    if (cachedResult) {
+      return NextResponse.json(cachedResult);
+    }
+
+    // Sadece contributors verisi çekilecek, stars ve forks shields.io'dan gelecek
+    const contributors = await getRepoContributors(githubUrl, 12);
+    const result = { contributors };
+
+    // Sonucu cache'le
+    setCachedData(cacheKey, result);
+
+    return NextResponse.json(result);
   } catch (e) {
     return NextResponse.json(
       { error: "Failed to fetch GitHub data" },

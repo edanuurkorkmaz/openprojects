@@ -118,7 +118,7 @@
     "features": {
       "realtime": {
         "title": "Real-time Data",
-        "description": "Up-to-date project statistics with GitHub API integration"
+        "description": "GitHub statistics with shields.io and contrib.rocks integration"
       },
       "discovery": {
         "title": "Advanced Discovery",
