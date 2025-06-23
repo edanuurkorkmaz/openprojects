@@ -156,25 +156,18 @@ export function Footer() {
           </p>
           <div className="flex items-center space-x-4">
             <Link
-              href="https://github.com/your-repo"
+              href="https://github.com/furkanczay/openprojects"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
             >
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href="https://twitter.com/your-handle"
+              href="https://twitter.com/projects_open"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
             >
               <Twitter className="w-5 h-5" />
-            </Link>
-            <Link
-              href="https://your-website.com"
-              target="_blank"
-              className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
-            >
-              <Globe className="w-5 h-5" />
             </Link>
           </div>
         </div>
