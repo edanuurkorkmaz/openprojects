@@ -862,4 +862,14 @@ export default [
     tags: ["monorepo", "build-tool", "typescript", "workspace"],
     category: ProjectCategory.Tool,
   },
+  {
+    name: "Sucrose",
+    description: "Sucrose Wallpaper Engine",
+    longDescription:
+      "Sucrose is a versatile wallpaper engine that brings life to your desktop with a wide range of interactive wallpapers.",
+    githubUrl: "https://github.com/Taiizor/Sucrose",
+    website: "https://taiizor.github.io/Sucrose",
+    tags: ["windows", "wallpaper", "engine"],
+    category: ProjectCategory.Application,
+  },
 ] as Project[];
