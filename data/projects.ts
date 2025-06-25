@@ -871,5 +871,6 @@ export default [
     website: "https://taiizor.github.io/Sucrose",
     tags: ["windows", "wallpaper", "engine"],
     category: ProjectCategory.Application,
+    featured: true,
   },
 ] as Project[];
