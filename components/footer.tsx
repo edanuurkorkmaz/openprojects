@@ -9,6 +9,7 @@ import {
   Workflow,
   Sparkles,
   Info,
+  Linkedin,
 } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -107,8 +108,9 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sponsors"
+                  href="https://github.com/sponsors/furkanczay"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  target="_blank"
                 >
                   <Crown className="inline w-4 h-4 mr-1" />
                   {tNav("becomeSponsor")}
@@ -116,7 +118,8 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/discord"
+                  href="https://discord.gg/SkundF4FFU"
+                  target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <MessageCircle className="inline w-4 h-4 mr-1" />
@@ -161,7 +164,14 @@ export function Footer() {
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href="https://twitter.com/projects_open"
+              href="https://linkedin.com/in/furkanczay"
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
+            >
+              <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://twitter.com/furkanczay"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
             >
