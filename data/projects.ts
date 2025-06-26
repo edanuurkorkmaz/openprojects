@@ -51,6 +51,7 @@ export default [
     tags: ["ssg", "static site generator", "library"],
     category: ProjectCategory.Library,
     featured: false,
+  },
   {
     name: "NestJS",
     description:
