@@ -169,7 +169,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
             <div className="flex flex-col items-end gap-2">
               {repoInfo && (
                 <div className="flex flex-col gap-2 items-center justify-end">
-                  <Badge variant={"secondary"}>
+                  <Badge className="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100" >
                     <Star className="fill-yellow-500 text-yellow-500 w-4 h-4" />
                     <Image
                       src={`https://img.shields.io/github/stars/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
@@ -178,7 +178,7 @@ export function ProjectCard({ project, className = "" }: ProjectCardProps) {
                       height={10}
                     />
                   </Badge>
-                  <Badge variant={"secondary"}>
+                  <Badge className="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                     <GitFork className="w-4 h-4" />
                     <Image
                       src={`https://img.shields.io/github/forks/${repoInfo.owner}/${repoInfo.repo}?style=for-the-badge&label=&color=rgba(0%2C0%2C0%2C0)`}
