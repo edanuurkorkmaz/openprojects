@@ -885,6 +885,187 @@ export default [
     featured: true,
   },
   {
+    name: "TanStack Query",
+    description: "Powerful asynchronous state management for TS/JS",
+    longDescription:
+      "TanStack Query (formerly React Query) is a powerful data-fetching and caching library that simplifies remote state management in React, Vue, and Svelte.",
+    githubUrl: "https://github.com/TanStack/query",
+    website: "https://tanstack.com/query",
+    tags: ["react", "data-fetching", "library"],
+    category: ProjectCategory.Library,
+  },
+  {
+    name: "PNPM",
+    description: "Fast, disk space efficient package manager",
+    longDescription:
+      "PNPM is a fast, efficient JavaScript package manager that uses a content-addressable filesystem to save disk space and boost performance.",
+    githubUrl: "https://github.com/pnpm/pnpm",
+    website: "https://pnpm.io/",
+    tags: ["tooling", "package-manager", "performance"],
+    category: ProjectCategory.Tool,
+  },
+  {
+    name: "SvelteKit",
+    description: "The fastest way to build Svelte apps",
+    longDescription:
+      "SvelteKit is a modern application framework powered by Svelte. It provides SSR, routing, and great developer ergonomics out of the box.",
+    githubUrl: "https://github.com/sveltejs/kit",
+    website: "https://kit.svelte.dev/",
+    tags: ["svelte", "framework", "frontend"],
+    category: ProjectCategory.Framework,
+  },
+  {
+    name: "Zitadel",
+    description: "Open-source identity infrastructure",
+    longDescription:
+      "Zitadel is an open-source identity and access management solution that supports OAuth2, OIDC, and SAML — similar to Auth0 but self-hosted.",
+    githubUrl: "https://github.com/zitadel/zitadel",
+    website: "https://zitadel.com/",
+    tags: ["authentication", "iam", "oauth"],
+    category: ProjectCategory.Authentication,
+  },
+  {
+    name: "Locomotive Scroll",
+    description: "Smooth scrolling library for modern websites",
+    longDescription:
+      "Locomotive Scroll is a modern JavaScript library that adds smooth scrolling and parallax effects to websites with minimal effort.",
+    githubUrl: "https://github.com/locomotivemtl/locomotive-scroll",
+    website: "https://locomotivemtl.github.io/locomotive-scroll/",
+    tags: ["frontend", "animation", "scroll"],
+    category: ProjectCategory.Frontend,
+  },
+  {
+    name: "Day.js",
+    description: "2KB immutable date library alternative to Moment.js",
+    longDescription:
+      "Day.js is a minimalist JavaScript library that parses, validates, manipulates, and displays dates, with a Moment.js-compatible API.",
+    githubUrl: "https://github.com/iamkun/dayjs",
+    website: "https://day.js.org/",
+    tags: ["date", "javascript", "library"],
+    category: ProjectCategory.Library,
+  },
+  {
+    name: "Fathom Analytics",
+    description: "Simple, privacy-focused analytics",
+    longDescription:
+      "Fathom is a simple, GDPR-compliant, privacy-focused web analytics platform you can self-host. Great alternative to Google Analytics.",
+    githubUrl: "https://github.com/usefathom/fathom",
+    website: "https://usefathom.com/",
+    tags: ["analytics", "privacy", "application"],
+    category: ProjectCategory.Application,
+  },
+  {
+    name: "Drone CI",
+    description: "Continuous integration and delivery platform",
+    longDescription:
+      "Drone is a self-service CI/CD platform that automates software testing and delivery, built with containers and integrated with Git repositories.",
+    githubUrl: "https://github.com/harness/drone",
+    website: "https://www.drone.io/",
+    tags: ["ci", "cd", "devops"],
+    category: ProjectCategory.DevOps,
+  },
+  {
+    name: "PostgREST",
+    description: "REST API for any PostgreSQL database",
+    longDescription:
+      "PostgREST turns your PostgreSQL database directly into a RESTful API with support for filtering, relationships, JWT auth, and more.",
+    githubUrl: "https://github.com/PostgREST/postgrest",
+    website: "https://postgrest.org/",
+    tags: ["database", "api", "postgresql"],
+    category: ProjectCategory.Database,
+  },
+  {
+    name: "NocoDB",
+    description: "Turn any database into a smart spreadsheet",
+    longDescription:
+      "NocoDB is an open-source Airtable alternative that turns any SQL database into a smart spreadsheet interface, enabling collaborative, no-code workflows.",
+    githubUrl: "https://github.com/nocodb/nocodb",
+    website: "https://www.nocodb.com/",
+    tags: ["application", "nocode", "spreadsheet"],
+    category: ProjectCategory.Application,
+  },
+  {
+    name: "Lighthouse",
+    description: "Performance tool for web apps",
+    longDescription:
+      "Lighthouse is an open-source, automated tool for improving the quality of web pages. It audits performance, accessibility, SEO, and more.",
+    githubUrl: "https://github.com/GoogleChrome/lighthouse",
+    website: "https://developer.chrome.com/docs/lighthouse/",
+    tags: ["performance", "tool", "seo"],
+    category: ProjectCategory.Tool,
+  },
+  {
+    name: "Zustand",
+    description:
+      "A small, fast and scalable bearbones state-management solution",
+    longDescription:
+      "Zustand is a minimal, yet powerful state management library for React. It has no boilerplate, no context providers, and works great with hooks.",
+    githubUrl: "https://github.com/pmndrs/zustand",
+    website: "https://zustand-demo.pmnd.rs/",
+    tags: ["state", "react", "library"],
+    category: ProjectCategory.Library,
+  },
+  {
+    name: "Qwik",
+    description: "The HTML-first framework",
+    longDescription:
+      "Qwik is a new kind of web framework focused on instant loading and resumability. It's designed for speed and performance without hydration bottlenecks.",
+    githubUrl: "https://github.com/BuilderIO/qwik",
+    website: "https://qwik.builder.io/",
+    tags: ["framework", "html-first", "performance"],
+    category: ProjectCategory.Framework,
+  },
+  {
+    name: "Ory Kratos",
+    description: "Identity and user management system",
+    longDescription:
+      "Ory Kratos is a headless identity and user management system that supports passwordless login, MFA, account recovery, and more.",
+    githubUrl: "https://github.com/ory/kratos",
+    website: "https://www.ory.sh/kratos/",
+    tags: ["authentication", "identity", "oauth"],
+    category: ProjectCategory.Authentication,
+  },
+  {
+    name: "Flutter",
+    description: "Build beautiful native apps in record time",
+    longDescription:
+      "Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
+    githubUrl: "https://github.com/flutter/flutter",
+    website: "https://flutter.dev/",
+    tags: ["mobile", "cross-platform", "ui"],
+    category: ProjectCategory.Mobile,
+  },
+  {
+    name: "Turso",
+    description: "Edge-hosted SQLite for apps that run everywhere",
+    longDescription:
+      "Turso is an edge-hosted SQLite-based database that syncs with your app in real time and brings ultra-fast database reads to the edge.",
+    githubUrl: "https://github.com/tursodatabase/libsql",
+    website: "https://turso.tech/",
+    tags: ["sqlite", "database", "edge"],
+    category: ProjectCategory.Database,
+  },
+  {
+    name: "Portainer",
+    description: "Simplified container management UI",
+    longDescription:
+      "Portainer is an open-source container management tool that simplifies deployment and monitoring of Docker, Kubernetes, and Swarm environments via a powerful UI.",
+    githubUrl: "https://github.com/portainer/portainer",
+    website: "https://www.portainer.io/",
+    tags: ["docker", "kubernetes", "devops"],
+    category: ProjectCategory.DevOps,
+  },
+  {
+    name: "Lenis",
+    description: "Smooth scroll for modern websites",
+    longDescription:
+      "Lenis is a performant scroll library with inertia, native feel, and modern APIs. Great for scroll-triggered animations and smooth UIs.",
+    githubUrl: "https://github.com/studio-freight/lenis",
+    website: "https://lenis.studiofreight.com/",
+    tags: ["scroll", "frontend", "animation"],
+    category: ProjectCategory.Frontend,
+  },
+  {
     name: "Listmonk",
     description: "Self-hosted newsletter and mailing list manager",
     longDescription:
