@@ -44,7 +44,8 @@ export default [
   },
   {
     name: "Zyros",
-    description: "A developer-friendly static site generator built with Next.js and Tailwind CSS.",
+    description:
+      "A developer-friendly static site generator built with Next.js and Tailwind CSS.",
     longDescription:
       "A developer-friendly static site generator built with Next.js and Tailwind CSS. Transform a simple JSON file into a beautiful, fast static website with powerful features that developers and content creators love.",
     githubUrl: "https://github.com/zyrasoftware/zyros",
@@ -882,5 +883,23 @@ export default [
     tags: ["windows", "wallpaper", "engine"],
     category: ProjectCategory.Application,
     featured: true,
+  },
+  {
+    name: "Listmonk",
+    description: "Self-hosted newsletter and mailing list manager",
+    longDescription:
+      "Listmonk is a powerful, self-hosted newsletter and mailing list manager with a modern web interface and high performance.",
+    githubUrl: "https://github.com/knadh/listmonk",
+    website: "https://listmonk.app",
+    tags: ["newsletter", "email", "self-hosted", "marketing"],
+  },
+  {
+    name: "Unsend",
+    description: "Self-hosted email client with end-to-end encryption",
+    longDescription:
+      "Unsend is a self-hosted email client that focuses on privacy and security, offering end-to-end encryption for your emails.",
+    githubUrl: "https://github.com/unsend-dev/unsend",
+    website: "https://unsend.dev",
+    tags: ["email", "client", "self-hosted", "privacy"],
   },
 ] as Project[];
